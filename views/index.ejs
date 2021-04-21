@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <form action="/mail" method="post">
+    <form id="contactform"  action="/mail" name="contactform" method="post">
       <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value="John"><br>
+      <input type="text" id="fname" name="fname"><br>
       <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="email" value="Doe"><br><br>
+      <input type="text" id="lname" name="email"><br><br>
       <label for="lname">Last name:</label><br>
-      <input type="text" id="name" name="comments" value="Doe"><br><br>
-      <input type="submit" value="Submit">
-    </form>
+      <input type="text" id="name" name="comments" ><br>
+      <button type="submit" value="SEND" id="submit">Send</button>
+  </form>
   </body>
 </html>

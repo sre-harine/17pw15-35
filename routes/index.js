@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer')
-
+const nodemailer = require('nodemailer');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -23,7 +22,7 @@ router.post('/mail', (req, res) => {
   // Specify what the email will look like
   const mailOpts = {
     from: 'harshaK3010@gmail.com',//replace with your email
-    to: 'ihjassthasbekha@gmail.com',//replace with your email 
+    to: 'harshak3010@gmail.com',//replace with your email 
     subject:  `Message from contact form on ${req.body.fname}`,
     html:`<h1>Contact details</h1>
      <h2> name:${req.body.fname}</h2><br> 
@@ -33,11 +32,12 @@ router.post('/mail', (req, res) => {
 
   // Attempt to send the email
   smtpTrans.sendMail(mailOpts, (error, response) => {
+    
     if (error) {
-      console.log(error);
+      console.log(error);// Show a page indicating failure
     }
     else {
-      console.log("success");
+      console.log("sent!");
     }
   });
 });
