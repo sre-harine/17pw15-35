@@ -14,8 +14,8 @@ router.post('/mail', (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'harshak3010@gmail.com',
-      pass: 'toujoursheureux'
+      user: 'feihong.129@gmail.com',
+      pass: 'harine27'
     }
   });
 
