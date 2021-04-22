@@ -34,10 +34,13 @@ router.post('/mail', (req, res) => {
   smtpTrans.sendMail(mailOpts, (error, response) => {
     
     if (error) {
-      console.log(error);// Show a page indicating failure
+      console.log(error);
+      res.render('error',{message:'Feedback Not sent'});
+      // Show a page indicating failure
     }
     else {
       console.log("sent!");
+      res.render('error',{message:'Feedback sent'});
     }
   });
 });
